@@ -12,7 +12,7 @@ var ADDON_ID = 'myaddon';
 var PANEL_ID = "".concat(ADDON_ID, "/panel"); // give a unique name for the panel
 
 var MyPanel = function MyPanel() {
-  return /*#__PURE__*/_react.default.createElement("div", null, "MyAddon");
+  return /*#__PURE__*/_react.default.createElement("div", null, "HELLO");
 };
 
 _addons.addons.register(ADDON_ID, function (api) {
@@ -25,7 +25,7 @@ _addons.addons.register(ADDON_ID, function (api) {
       return /*#__PURE__*/_react.default.createElement(_components.AddonPanel, {
         active: active,
         key: key
-      }, /*#__PURE__*/_react.default.createElement(MyPanel, null));
+      }, /*#__PURE__*/_react.default.createElement(MyPanel, null, console.log('I rendered')));
     }
   });
 });
